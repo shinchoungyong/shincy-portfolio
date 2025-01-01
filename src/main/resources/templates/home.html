@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>shincy portfolio</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f9;
+}
+
+header, footer {
+	background-color: #333;
+	color: white;
+	padding: 1rem;
+	text-align: center;
+}
+
+main {
+	margin: 20px;
+	padding: 20px;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+}
+
+.content {
+	flex: 3;
+	padding: 20px;
+	border: 1px solid #f7f7f7; overflow-y : auto;
+	background-color: white;
+	margin-left: 10%;
+	overflow-y: auto;
+}
+
+.menu {
+	flex: 1;
+	background-color: #f7f7f7;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.menu-item {
+	margin-top: 10px;
+	padding: 10px 15px;
+	background-color: #ffeb3b;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.menu-item:hover {
+	background-color: #ffc107;
+}
+
+.menu-item.active {
+	background-color: #ffc107; /* 더 어두운 노란색 */
+	color: #000; /* 텍스트 색 변경 */
+	font-weight: bold; /* 강조 */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 약간의 입체감 */
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>포트폴리오</h1>
+	</header>
+
+	<!-- 배너 부문 -->
+	<div class="promotion" align="center">
+		<img width="100%" height="200px" alt="홍보용 이미지" src="/img/promo.png">
+	</div>
+
+	<br>
+
+	<div class="container">
+		<!-- 왼쪽 컨텐츠 영역 -->
+		<div class="content" id="content">
+			메뉴를 고르세요
+		</div>
+
+		<!-- 오른쪽 메뉴 영역 -->
+		<div class="menu">
+			<div id="menu1" class="menu-item" onclick="loadContent('menu1.html')">Introduce</div>
+			<div id="menu2" class="menu-item" onclick="loadContent('menu2.html')">Project</div>
+			<div id="menu3" class="menu-item" onclick="loadContent('menu3.html')">Stack</div>
+		</div>
+	</div>
+
+	<br>
+
+	<footer>
+		<h3>
+			cystudy93@gmail.com
+			</h1>
+	</footer>
+   <script>
+	function loadContent(file) { const content =
+	document.getElementById("content"); // XMLHttpRequest로 외부 파일 로드 const
+	xhr = new XMLHttpRequest(); xhr.open("GET", file, true);
+	xhr.onreadystatechange = function () { if (xhr.readyState === 4 &&
+	xhr.status === 200) { content.innerHTML = xhr.responseText; } };
+	xhr.send(); }
+
+	</script>
+</body>
+</html>
