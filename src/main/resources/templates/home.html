@@ -36,7 +36,8 @@ main {
 .content {
 	flex: 3;
 	padding: 20px;
-	border: 1px solid #f7f7f7; overflow-y : auto;
+	border: 1px solid #f7f7f7;
+	overflow-y: auto;
 	background-color: white;
 	margin-left: 10%;
 	overflow-y: auto;
@@ -75,7 +76,7 @@ main {
 	<header>
 		<h1>포트폴리오</h1>
 	</header>
-
+<!-- <iframe src="header.html" frameborder="0" width="100%" height="50"></iframe> -->
 	<!-- 배너 부문 -->
 	<div class="promotion" align="center">
 		<img width="100%" height="200px" alt="홍보용 이미지" src="/img/promo.png">
@@ -85,16 +86,21 @@ main {
 
 	<div class="container">
 		<!-- 왼쪽 컨텐츠 영역 -->
-		<div class="content" id="content">
-			메뉴를 고르세요
-		</div>
+		<div class="content" id="content">메뉴를 고르세요</div>
 
 		<!-- 오른쪽 메뉴 영역 -->
 		<div class="menu">
-			<div id="menu1" class="menu-item" onclick="loadContent('menu1.html')">Introduce</div>
-			<div id="menu2" class="menu-item" onclick="loadContent('menu2.html')">Project</div>
-			<div id="menu3" class="menu-item" onclick="loadContent('menu3.html')">Stack</div>
+			<div id="home" class="menu-item">
+				<a href="home.html">Introduce</a>
+			</div>
+			<div id="menu1" class="menu-item">
+				<a href="/menu1.html">Project</a>
+			</div>
+			<div id="menu2" class="menu-item">
+				<a href="/menu2.html">Stack</a>
+			</div>
 		</div>
+
 	</div>
 
 	<br>
@@ -104,14 +110,8 @@ main {
 			cystudy93@gmail.com
 			</h1>
 	</footer>
-   <script>
-	function loadContent(file) { const content =
-	document.getElementById("content"); // XMLHttpRequest로 외부 파일 로드 const
-	xhr = new XMLHttpRequest(); xhr.open("GET", file, true);
-	xhr.onreadystatechange = function () { if (xhr.readyState === 4 &&
-	xhr.status === 200) { content.innerHTML = xhr.responseText; } };
-	xhr.send(); }
-
+	<script>
+		
 	</script>
 </body>
 </html>
