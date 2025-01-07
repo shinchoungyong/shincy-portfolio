@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +78,7 @@ main {
 	<header>
 		<h1>포트폴리오</h1>
 	</header>
-<!-- <iframe src="header.html" frameborder="0" width="100%" height="50"></iframe> -->
+
 	<!-- 배너 부문 -->
 	<div class="promotion" align="center">
 		<img width="100%" height="200px" alt="홍보용 이미지" src="/img/promo.png">
@@ -131,7 +133,7 @@ main {
 
 
 	<br>
-
+ </div>
 	<footer>
 		<h2>
 			cystudy93@gmail.com
