@@ -1,143 +1,71 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>shincy portfolio</title>
-<style>
-body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	background-color: #f4f4f9;
-}
-
-header, footer {
-	background-color: #333;
-	color: white;
-	padding: 1rem;
-	text-align: center;
-}
-
-main {
-	margin: 20px;
-	padding: 20px;
-	background: white;
-	border-radius: 8px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.container {
-	display: flex;
-	width: 100%;
-	height: 100vh;
-}
-
-.content {
-	flex: 3;
-	padding: 20px;
-	border: 1px solid #f7f7f7;
-	overflow-y: auto;
-	background-color: white;
-	margin-left: 10%;
-	overflow-y: auto;
-}
-
-.menu {
-	flex: 1;
-	background-color: #f7f7f7;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-}
-
-.menu-item {
-	margin-top: 10px;
-	padding: 10px 15px;
-	background-color: #ffeb3b;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: all 0.2s;
-}
-
-.menu-item:hover {
-	background-color: #ffc107;
-}
-
-.menu-item.active {
-	background-color: #ffc107; /* 더 어두운 노란색 */
-	color: #000; /* 텍스트 색 변경 */
-	font-weight: bold; /* 강조 */
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 약간의 입체감 */
-}
-</style>
 </head>
+<link rel="stylesheet" href="/css/home.css">
 <body>
 	<header>
 		<h1>포트폴리오</h1>
+		<!--백그라운드 이미지 넣고, 사이드 메뉴 버튼 넣어보기  -->
+		<div class="Pr_ToolLogo">
+					<div class="github">
+						<a href="https://github.com/shinchoungyong" target="_blank" rel="noopener noreferrer">
+							<img class="githubLogo" src="/img/githubLogo.png" alt="GithubLogo">
+						</a>							
+					</div>
+					<div class="velog">
+						<a href="https://velog.io/@shinchoungyong/posts" target="_blank" rel="noopener noreferrer">
+							<img class="velogLogo" src="/img/velog.png" alt="VelogLogo">
+						</a>							
+					</div>
+				</div>
 	</header>
 
-	<!-- 배너 부문 -->
-	<div class="promotion" align="center">
-		<img width="100%" height="200px" alt="홍보용 이미지" src="/img/promo.png">
-	</div>
 
-	<br>
-
-	<div class="container">
-		<!-- 왼쪽 컨텐츠 영역 -->
-		<div class="content" id="content">
-			<h2> 기본 프로필</h2>
-			
-			<br>
-			<h3>정리</h3>
-			<hr>
-			
-			<div class="basic">
-			<img id="profile_img" alt="프로필이미지" src="/img/profile.jpg">
-				<div class = basic_info>
-				<h3>이름 : 신충용</h3>
-				<h3>생년월일 : 93.09.07</h3>
-				<h3>주거지 : 서울 노원구</h3>
-				</div>			 
-			</div>
-		
-			<br>
-			<hr>
-			
-			<div class="basic">
-			
-				<div class = github>
-				<h3>Github 주소</h3>
-				<h4>https://github.com/shinchoungyong </h4>
-				</div>			 
-			</div>
-			
-			<br>
-			<hr>
-			
-			<div class="basic">
-			
-				<div class = lifetime>
-				<h3>연혁</h3>
-				<h4>연혁 다이어그램 </h4>
-				<h4>고등- 대학- 군대- 입/퇴사- 스마트인재개발원 교육</h4>
-				</div>		 
-			</div>
-		
-		
-		
+	<section class="About_me">
+		<div class="About_me_title">
+			<h1 class="">About Me</h1>
 		</div>
+		<div class="About_me_content">
+			<h1>성실한 개발자</h1>
+			<p>개발자를 꿈꾸게 되었습니다..<br>잘부탁드립니다.</p>
+			<p>이름 : 신충용</p>
+			<p>생년월일 : 93년 9월 7일</p>
+			
+		</div>
+		<div class="About_me_section">
+			<img id="profile_img" alt="프로필이미지" src="/img/profile.jpg">
+		</div>		
+	</section>
+
+	<section class="Tech_stack">
+		<div class="Tech_stack_title">
+			<h1 class="">Tech Stack</h1>
+		</div>
+		<div class="Tech_stack_content">
+			<!-- Card 1 -->
+        	<div class="card">
+            	<div class="icon">
+                	<img src="/icons/Java.png" alt="Java">
+            	</div>
+            	<h2>Java</h2>
+        	</div>
+			
+		</div>		
+	</section>
 
 
-	<br>
- </div>
+	
+
+		
+
 	<footer>
-		<h2>
-			cystudy93@gmail.com
-		</h2>
+		<h2>cystudy93@gmail.com</h2>
 	</footer>
 	<script>
 		

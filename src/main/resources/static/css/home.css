@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f9;
+}
+
+header {
+	background-color: #333;
+	color: white;
+	padding: 1rem;
+	text-align: center;
+	height: 600px;
+}
+
+footer {
+	background-color: #333;
+	color: white;
+	padding: 1rem;
+	text-align: center;
+}
+/* 헤더 버튼  */
+.Pr_ToolLogo {
+	display: flex;
+	margin-top: 450px;
+	margin-left: 20px;
+}
+
+.github {
+	background-color: white;
+	border-radius: 50%; 
+	width: 50px; 
+	height: 50px; 
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.github a {
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	width: 100%; 
+	height: 100%;
+	text-decoration: none; 
+}
+
+.githubLogo {
+	width: 100%; 
+	height: auto; 
+}
+
+.github:hover {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	transform: scale(1.1); 
+}
+
+.githubLogo:hover {
+	transform: scale(1.1);
+}
+
+/* Velog */
+.velog {
+	margin-left: 25px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	width: 50px; 
+	height: 50px;
+	border-radius: 50%; 
+}
+
+.velogLogo {
+	border-radius: 50%; 
+	width: 50px; 
+	height: 50px;
+}
+
+.velogLogo {
+	width: 100%; 
+	height: auto; 
+}
+
+.velog:hover {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	transform: scale(1.1); 
+}
+
+.velogLogo:hover {
+	transform: scale(1.1);
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+}
+
+.content {
+	flex: 3;
+	padding: 20px;
+	border: 1px solid #f7f7f7;
+	overflow-y: auto;
+	background-color: white;
+	margin-left: 10%;
+	overflow-y: auto;
+}
+/* About ME */
+.About_me {
+	margin: 0;
+	background: #fff;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+.About_me_title{
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+.About_me_content{
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+}
+
+.About_me_section{
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+}
+
+#profile_img{
+	width : 300px;
+	height : 350px;
+	border-radius: 100%;
+	margin : 20px;
+	
+}
+
+/* Tech Stack */
+.Tech_stack {
+	margin: 0;
+	background: #fff;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+.Tech_stack_title{
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+.Tech_stack_content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+/* Single card */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card .icon img {
+    width: 25px;
+    height: 25px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #222;
+    margin-bottom: 10px;
+    margin: 0;
+}
+
+
