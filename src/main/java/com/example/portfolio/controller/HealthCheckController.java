@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 public class HealthCheckController {
 
@@ -28,8 +29,8 @@ public class HealthCheckController {
 		
 		Map<String, String> responseData = new HashMap<>();
 		responseData.put("serverName", serverName);
-		responseData.put("server", serverAddress);
-		responseData.put("server", serverPort);
+		responseData.put("serverAddress", serverAddress);
+		responseData.put("serverPort", serverPort);
 		responseData.put("env", env);  
 		
 		return ResponseEntity.ok(responseData);		
@@ -43,7 +44,6 @@ public class HealthCheckController {
 	}
 	
 	
-
 }
 
 
