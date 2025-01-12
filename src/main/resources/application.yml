@@ -32,7 +32,10 @@ server:
   port: 8080
   serverAddress: 3.38.233.45
   serverName: blue_server
-
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
 ---
 
 spring:
@@ -44,5 +47,8 @@ server:
     port: 8081
     serverAddress: 3.38.233.45
     serverName: green_server
-
+    mvc:
+     view:
+        prefix: /WEB-INF/views/
+        suffix: .jsp
 ---
