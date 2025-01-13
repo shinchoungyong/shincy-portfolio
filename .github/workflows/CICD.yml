@@ -90,18 +90,6 @@ jobs:
           script: |
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/live_server:latest
             sudo docker-compose -f docker-compose-${{env.TARGET_UPSTREAM}}.yml up -d
-
-      - name: Test SSH connection
-        run: |
-          ssh -i ${{ secrets.EC2_SSH_KEY }} ubuntu@${{ secrets.LIVE_SERVER_IP }} echo "SSH connection successful"
-      - name: Test connectivity to server
-        run: |
-          curl -v http://${{ secrets.LIVE_SERVER_IP }}/env
-      - name: Get GitHub Actions IP
-        run: curl http://checkip.amazonaws.com
-      - name: Run in debug mode
-        run: curl -v http://${{ secrets.LIVE_SERVER_IP }}/env
-
       
       
       - name: Check deploy server URL
