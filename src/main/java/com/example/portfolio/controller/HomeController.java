@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 	
-	@GetMapping("/")
-	public String home() {
+	@GetMapping("/view")
+	public String Homepage() {
 		return "home";
 	}
 	

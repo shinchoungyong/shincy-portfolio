@@ -18,10 +18,10 @@ public class HealthCheckController {
 	@Value("${server.port}")
 	private String serverPort;
 
-	@Value("${server.serverAddress}")
+	@Value("${server.address}")
 	private String serverAddress;
 
-	@Value("${server.Name}")
+	@Value("${serverName}")
 	private String serverName;
 
 	@GetMapping("/hc")
@@ -29,8 +29,8 @@ public class HealthCheckController {
 		
 		Map<String, String> responseData = new HashMap<>();
 		responseData.put("serverName", serverName);
-		responseData.put("serverAddress", serverAddress);
-		responseData.put("serverPort", serverPort);
+		responseData.put("server", serverAddress);
+		responseData.put("port", serverPort);
 		responseData.put("env", env);  
 		
 		return ResponseEntity.ok(responseData);		

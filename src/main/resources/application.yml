@@ -2,9 +2,9 @@ spring:
   profiles:
     active: local
     group:
-      local: local, common, secret
-      blue: blue, common, secret
-      green: green, common, secret
+      local: local, common
+      blue: blue, common
+      green: green, common
 
 server:
   env: blue
@@ -18,8 +18,9 @@ spring:
 
 server:
   port: 8080
-  serverAddress: localhost
-  serverName: local_server
+  address: localhost
+
+serverName: local_server
 
 ---
 
@@ -30,12 +31,11 @@ spring:
 
 server:
   port: 8080
-  serverAddress: 3.38.233.45
-  serverName: blue_server
-  mvc:
-    view:
-      prefix: /WEB-INF/views/
-      suffix: .jsp
+  address: 0.0.0.0
+
+
+serverName: blue_server
+  
 ---
 
 spring:
@@ -45,10 +45,14 @@ spring:
 
 server:
     port: 8081
-    serverAddress: 3.38.233.45
-    serverName: green_server
-    mvc:
-     view:
-        prefix: /WEB-INF/views/
-        suffix: .jsp
+    address: 0.0.0.0
+
+serverName: green_server
+    
 ---
+
+spring:
+  security:
+     user:
+       name: user
+       password: password
