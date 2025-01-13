@@ -19,23 +19,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
- 
-      - name: Check Maven version
-        run: mvn -version
-     
-      - name: Clear Maven cache
-        run: rm -rf ~/.m2/repository/org/projectlombok
-
-      - name: Build with Maven (Debug)
-        run: mvn clean package -X -Dmaven.test.skip=true
-          
-      - name: Cache Maven dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
 
       - name: Build with Maven
         run: |
@@ -60,19 +43,18 @@ jobs:
       - name: Set target IP
         run: |
          STATUS=$(curl -o /dev/null -w "%{http_code}" "http://${{ secrets.LIVE_SERVER_IP }}/env")
-         echo "HTTP STATUS: $STATUS"
-         if [[ "$STATUS" == "200" ]]; then
+         echo $STATUS
+         if [$STATUS == 200 ]; then
            CURRENT_UPSTREAM=$(curl -s "http://${{ secrets.LIVE_SERVER_IP }}/env")
          else
            CURRENT_UPSTREAM=green
          fi
          echo "CURRENT_UPSTREAM=$CURRENT_UPSTREAM" >> $GITHUB_ENV
-
-         if [ "$CURRENT_UPSTREAM" == blue ]; then
+         if [ $CURRENT_UPSTREAM == blue ]; then
            echo "CURRENT_PORT=8080" >> $GITHUB_ENV
            echo "STOPPED_PORT=8081" >> $GITHUB_ENV
            echo "TARGET_UPSTREAM=green" >> $GITHUB_ENV
-         elif [ "$CURRENT_UPSTREAM" == green ]; then
+         elif [ $CURRENT_UPSTREAM == green ]; then
            echo "CURRENT_PORT=8081" >> $GITHUB_ENV
            echo "STOPPED_PORT=8080" >> $GITHUB_ENV
            echo "TARGET_UPSTREAM=blue" >> $GITHUB_ENV
@@ -87,6 +69,7 @@ jobs:
           username: ubuntu
           host: ${{ secrets.LIVE_SERVER_IP }}
           key: ${{ secrets.EC2_SSH_KEY }}
+          script_stop: true
           script: |
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/live_server:latest
             sudo docker-compose -f docker-compose-${{env.TARGET_UPSTREAM}}.yml up -d
@@ -95,7 +78,7 @@ jobs:
       - name: Check deploy server URL
         uses: jtalk/url-health-check-action@v3
         with:
-          url: http://${{ secrets.LIVE_SERVER_IP }}:${{ env.STOPPED_PORT}}/env
+          url: http://${{ secrets.LIVE_SERVER_IP }}:${{env.STOPPED_PORT}}/env
           max-attempts: 5
           retry-delay: 10s
 
