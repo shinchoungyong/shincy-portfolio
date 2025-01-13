@@ -22,7 +22,12 @@ jobs:
  
       - name: Check Maven version
         run: mvn -version
+     
+      - name: Clear Maven cache
+        run: rm -rf ~/.m2/repository/org/projectlombok
 
+      - name: Build with Maven (Debug)
+        run: mvn clean package -X -Dmaven.test.skip=true
           
       - name: Cache Maven dependencies
         uses: actions/cache@v3
