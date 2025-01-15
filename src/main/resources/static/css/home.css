@@ -169,8 +169,7 @@ nav a:visited, nav a:focus, nav a:active {
 
 .home {
 	position: relative; /* 가상 요소 사용을 위해 설정 */
-	background: url('img/main_pic.png') no-repeat center/cover;
-	/* 배경 이미지 */
+	background: url('') no-repeat center/cover;
 	height: 45vh; /* 섹션 높이를 화면 전체 높이로 설정 */
 	display: flex; /* 텍스트를 중앙 정렬하기 위한 플렉스 박스 */
 	flex-direction: column; /* 텍스트를 위아래로 정렬 */
