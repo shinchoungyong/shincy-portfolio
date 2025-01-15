@@ -3,189 +3,251 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="img/logo.png" rel="shortcut icon" type="image/x-icon">
 <title>shincy portfolio</title>
 </head>
 <link rel="stylesheet" href="/css/home.css">
 <body>
-	<header class="header-background">
-		<h1>개발자 신충용의</h1>
-		<h1>포트폴리오</h1>
-
-		<div class="Pr_ToolLogo">
-			<div class="github">
-				<a href="https://github.com/shinchoungyong" target="_blank"
-					rel="noopener noreferrer"> <img class="githubLogo"
-					src="/img/githubLogo.png" alt="GithubLogo">
-				</a>
-			</div>
-			<div class="velog">
-				<a href="https://velog.io/@shinchoungyong/posts" target="_blank"
-					rel="noopener noreferrer"> <img class="velogLogo"
-					src="/img/velog.png" alt="VelogLogo">
-				</a>
-			</div>
-		</div>
+	<header id="header">
+		<div>shincy's portfolio</div>
+		<nav>
+			<a href="#home">Home</a> <a href="#about_me">About Me</a> <a
+				href="#skills">Skills</a> <a href="#projects">Projects</a> <a
+				href="#contact">Contact</a>
+		</nav>
 	</header>
 
+	<div class="container">
 
-	<section class="About_me">
-		<div class="About_me_title">
-			<h1 class="">About Me</h1>
-		</div>
-		<div class="About_me_content">
-			<h1 class="h1style">학생들에게 가르치던 수업에서, </h1>
-			<h1 class="h1style2"> 이제는 코딩 세션으로!</h1>
-			<p class="p_intro1">"과학 교사에서 개발자로 전향한 열정적인 늦깎이 개발자입니다.</p>
-			<p class="p_intro1">효율적인 코드와 창의적인 솔루션으로 가치를 더하는 것을 목표로 합니다."</p>
-			<p class="p_intro">●  이름 :  신충용</p>
-			<p class="p_intro">●  연락처 :  010-6278-1319</p>
-			<p class="p_intro">●  이메일 :  cystudy93@gmail.com</p>
-			<p class="p_intro">●  Github link :  github.com/shinchoungyong</p>
-			<p class="p_intro">●  생년월일 :  93년 9월 7일</p>
-			<p class="p_intro">●  최종학력 :  국민대 생명나노화학과(졸업)</p>
-			<p class="p_intro">●  IT 교육 :  스마트인재개발원 DCX 개발자과정 수료</p>
-			<p class="p_intro">●  병역 :  해군 23개월 병장만기전역(서울함 근무, 사격조교)</p>
-			<p class="p_intro">●  경력 :  중학교 담임교사 및 과학강사 약 5년(~2023)</p>
-			<p class="p_intro">●  자격증 : 중등 교원자격증(2017) , 정보처리기사(2025에 따고싶음)</p>
+		<section id="home" class="home">
+			<div class="home_text">
+				<h1 id="home_name">신충용</h1>
+				<h1 id="home_be">Developer</h1>
+				<p># 과학 선생님에서 개발자로..!!</p>
+				<p># 열정적인 늦깎이 개발자</p>
+				<p># 끊임없이 성장 중</p>
 
-		</div>
-		<div class="About_me_section">
-			<img id="profile_img" alt="프로필이미지" src="/img/profile.jpg">
-		</div>
-	</section>
-
-	<section class="Tech_stack">
-		<div class="Tech_stack_title">
-			<h1 class="">Tech Stack</h1>
-		</div>
-		<div class="Tech_stack_content">
-			<div class="Tech_stack_index">
-				<div class="T_index">
-					<h1>Back-end</h1>
+			</div>
+			<div class="Pr_ToolLogo">
+				<div class="github">
+					<a href="https://github.com/shinchoungyong" target="_blank"
+						rel="noopener noreferrer"> <img class="githubLogo"
+						src="/img/githubLogo.png" alt="GithubLogo">
+					</a>
 				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/Java.png" alt="Java">
-					</div>
-					<h2>Java</h2>
-				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/SpringBoot.png" alt="SpringBoot">
-					</div>
-					<h2>SpringBoot</h2>
-				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/Python.png" alt="Python">
-					</div>
-					<h2>Python</h2>
+				<div class="velog">
+					<a href="https://velog.io/@shinchoungyong/posts" target="_blank"
+						rel="noopener noreferrer"> <img class="velogLogo"
+						src="/img/velog.png" alt="VelogLogo">
+					</a>
 				</div>
 			</div>
-			<div class="Tech_stack_index">
-				<div class="T_index">
-					<h1>Front-end</h1>
-				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/Html.png" alt="Html">
-					</div>
-					<h2>Html</h2>
-				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/Css.png" alt="Css">
-					</div>
-					<h2>Css</h2>
-				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/Js.png" alt="Js">
-					</div>
-					<h2>JavaScript</h2>
-				</div>
-			</div>
-			<div class="Tech_stack_index">
-				<div class="T_index">
-					<h1>DataBase</h1>
-				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/Oracle.png" alt="Oracle">
-					</div>
-					<h2>Oracle</h2>
-				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/MySql.png" alt="MySql">
-					</div>
-					<h2>MySQL</h2>
-				</div>
-			</div>
-			<div class="Tech_stack_index">
-				<div class="T_index2">
-					<h1>Collaboration</h>
-				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/git.png" alt="git">
-					</div>
-					<h2>Git</h2>
-				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/github.png" alt="github">
-					</div>
-					<h2>Github</h2>
-				</div>
-				<div class="card">
-					<div class="icon">
-						<img src="/icons/Notion.png" alt="Notion">
-					</div>
-					<h2>Notion</h2>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="Project">
-		<div class="Project_title">
-			<h1 class="">Project</h1>
-		</div>
-		<div class="Project_content">
-			<div class="project-item">
-				<a href="https://github.com/shinchoungyong/EudBuddy" target="_blank">
-					<img src="/img/edubuddy.png" alt="Edubuddy">
-				</a>
-				<p class="p_title">키워드 기반 AI 문제추천시스템</p>
-			</div>
-			<!-- 두 번째 프로젝트 -->
-			<div class="project-item">
-				<a href="https://github.com/shinchoungyong/WebQKC" target="_blank">
-				 <img src="/img/QKC.png" alt="WebQKC">
-				</a>
-				<p class="p_title">식품 수출회사 웹사이트 리뉴얼</p>
-			</div>
-			<!-- 세 번째 프로젝트 -->
-			<div class="project-item">
-				<a href="https://github.com/shinchoungyong/DoRiBun" target="_blank"> 
-				<img src="/img/DuRibun.png" alt="DoRiBun">
-				</a>
-				<p class="p_title">여행자 전용 SNS 플랫폼</p>
-			</div>
-		</div>
-
-	</section>
+		</section>
 
 
-	<footer>
-		<h1>Contact me!</h1>
-		<a id=gitlink href="https://github.com/shinchoungyong">Github :
-			github.com/shinchoungyong</a>
-		<h2>Mail : cystudy93@gmail.com</h2>
-		<h2>Telephone : 010-6278-1319</h2>
-	</footer>
 
 
+		<section id="about_me" class="About_me">
+			<div class="About_me_title">
+				<h1 class="">About Me</h1>
+			</div>
+			<div class="About_me_content">
+				<h1 class="h1style">학생들에게 가르치던 수업에서,</h1>
+				<h1 class="h1style2">이제는 코딩 세션으로!</h1>
+				<!-- <p class="p_intro">"과학 교사에서 개발자로 전향한 열정적인 늦깎이 개발자입니다.</p>
+			<p class="p_intro">효율적인 코드와 창의적인 솔루션으로 가치를 더하는 것을 목표로 합니다."</p> -->
+				<p class="p_intro">● 생년월일 : 93년 9월 7일</p>
+				<p class="p_intro">● 최종학력 : 국민대 생명나노화학과(졸업)</p>
+				<p class="p_intro">● 병역 : 해군 23개월 병장 만기전역(서울함 근무, 사격조교)</p>
+				<p class="p_intro">● 경력 : 중학교 담임교사 및 과학강사 약 5년(~2023)</p>
+				<p class="p_intro">● 자격증 : 중등 교원자격증(2017) , 정보처리기사(2025에 따고싶음)</p>
+				<p class="p_intro">● IT 교육 : 스마트인재개발원 DCX 개발자과정 수료(6개월)</p>
+
+			</div>
+			<div class="About_me_section">
+				<img id="profile_img" alt="프로필이미지" src="/img/profile.jpg">
+			</div>
+		</section>
+
+		<section id="skills" class="Skills">
+			<div class="Skill_title">
+				<h1 class="">Skills</h1>
+			</div>
+			<div class="Skill_content">
+				<div class="Skill_index">
+					<div class="S_index">
+						<h1>Back-end</h1>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/Java.png" alt="Java">
+						</div>
+						<h2>Java</h2>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/SpringBoot.png" alt="SpringBoot">
+						</div>
+						<h2>SpringBoot</h2>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/Python.png" alt="Python">
+						</div>
+						<h2>Python</h2>
+					</div>
+				</div>
+				<div class="Skill_index">
+					<div class="S_index">
+						<h1>Front-end</h1>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/Html.png" alt="Html">
+						</div>
+						<h2>Html</h2>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/Css.png" alt="Css">
+						</div>
+						<h2>Css</h2>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/Js.png" alt="Js">
+						</div>
+						<h2>JavaScript</h2>
+					</div>
+				</div>
+				<div class="Skill_index">
+					<div class="S_index">
+						<h1>DataBase</h1>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/Oracle.png" alt="Oracle">
+						</div>
+						<h2>Oracle</h2>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/MySql.png" alt="MySql">
+						</div>
+						<h2>MySQL</h2>
+					</div>
+				</div>
+				<div class="Skill_index">
+					<div class="S_index2">
+						<h1>
+							Collaboration
+							</h>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/git.png" alt="git">
+						</div>
+						<h2>Git</h2>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/github.png" alt="github">
+						</div>
+						<h2>Github</h2>
+					</div>
+					<div class="card">
+						<div class="icon">
+							<img src="/icons/Notion.png" alt="Notion">
+						</div>
+						<h2>Notion</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="projects" class="Project">
+			<div class="Project_title">
+				<h1 class="">Projects</h1>
+			</div>
+			<div class="Project_content">
+				<div class="project-item">
+					<a href="https://github.com/shinchoungyong/EudBuddy"
+						target="_blank"> <img src="/img/edubuddy.png" alt="Edubuddy">
+					</a>
+					<p class="p_title">키워드 기반 </p>
+					<p class="p_title">AI 문제추천시스템</p>
+				</div>
+				<!-- 두 번째 프로젝트 -->
+				<div class="project-item">
+					<a href="https://github.com/shinchoungyong/WebQKC" target="_blank">
+						<img src="/img/QKC.png" alt="WebQKC">
+					</a>
+					<p class="p_title">식품 수출회사</p>
+					<p class="p_title">웹사이트 리뉴얼</p>
+				</div>
+				<!-- 세 번째 프로젝트 -->
+				<div class="project-item">
+					<a href="https://github.com/shinchoungyong/DoRiBun" target="_blank">
+						<img src="/img/DuRibun.png" alt="DoRiBun">
+					</a>
+					<p class="p_title">여행자 전용 SNS 플랫폼</p>
+				</div>
+				<!-- 네 번째 프로젝트 -->
+				<div class="project-item">
+					<a href="https://github.com/shinchoungyong" target="_blank">
+						<img src="/img/example.jpg" alt="DoRiBun">
+					</a>
+					<p class="p_title">네 번째 프로젝트</p>
+				</div>
+				<!-- 다섯 번째 프로젝트 -->
+				<div class="project-item">
+					<a href="https://github.com/shinchoungyong" target="_blank">
+						<img src="/img/example.jpg" alt="DoRiBun">
+					</a>
+					<p class="p_title">다섯 번째 프로젝트</p>
+				</div>
+			</div>
+		</section>
+		<br>
+
+		<section id="contact" class="Contact">
+			<div class="Contact_title">
+				<h1 class="">Contact</h1>
+			</div>
+			<div class="Contact_content">
+				<h1 class="contact_me">Contact me!</h1>
+				<h2>Telephone : 010-6278-1319</h2>
+				<h2>Mail : cystudy93@gmail.com</h2>
+				<a id=gitlink href="https://github.com/shinchoungyong">Github
+					:github.com/shinchoungyong</a>
+			</div>
+
+		</section>
+
+		<footer> @충용의 프로필 </footer>
+		<script>
+		//스크롤 부드럽게
+		document.querySelectorAll('nav a').forEach(anchor => {
+	 	anchor.addEventListener('click', function (e) {
+	    e.preventDefault();
+	    const targetId = this.getAttribute('href'); // a 태그의 href 값을 가져옴
+	    document.querySelector(targetId).scrollIntoView({
+	      behavior: 'smooth', // 부드럽게 스크롤
+	      block: 'start' // 섹션의 상단이 화면 상단에 맞춰지도록 설정
+	 			   });
+			  });
+			});
+		
+		// 스크롤 이벤트 추가
+	    window.addEventListener('scroll', () => {
+	        const header = document.getElementById('header');
+	        if (window.scrollY > 50) {
+	            header.classList.add('scrolled'); // 스크롤 내리면 클래스 추가
+	        } else {
+	            header.classList.remove('scrolled'); // 스크롤 위로 올라가면 클래스 제거
+	        }
+	    });
+
+</script>
 </body>
 </html>
