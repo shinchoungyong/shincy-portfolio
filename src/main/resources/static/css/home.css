@@ -329,9 +329,11 @@ footer {
 .About_me_title{
 	display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
     padding: 20px;
     margin: 10px;
+    margin-left: 20px;
     width: 400px;
     font-family: sans-serif;
     font-style: italic;
@@ -380,9 +382,11 @@ footer {
 .Skill_title{
 	display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
     padding: 20px;
     margin: 10px;
+    margin-left: 20px;
     flex-wrap: wrap; 
     justify-content: center;
     width: 400px;
@@ -507,9 +511,11 @@ footer {
 .Project_title {
 	display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
     padding: 20px;
     margin: 10px;
+    margin-left: 20px;
     width: 400px;
     font-family: sans-serif;
     font-style: italic;
@@ -588,16 +594,18 @@ footer {
 }
 
 .Contact_title {
-  display: flex;
-  width: 400px;
-  justify-content: center;
-  align-content: center;
-  padding: 20px;
-  margin: 10px;
-  font-family: sans-serif;
-  font-style: italic;
-  font-size: xx-large;
-  white-space: nowrap;
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    margin-left: 20px;
+    width: 400px;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: xx-large;
+    white-space: nowrap;
 }
 
 .Contact_content{
